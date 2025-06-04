@@ -78,8 +78,7 @@ If successful, you'll see:
 ### ➕ Create a Campaign
 
 **POST** `/api/campaigns`  
-**Body:**
-
+**Body:** 
 ```json
 {
   "userId": "user123",
