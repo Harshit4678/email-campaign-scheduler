@@ -58,7 +58,7 @@ MONGODB_URI=your_mongodb_atlas_connection_string
 PORT=5000
 ```
 
-### 4. Start the Server
+### 4. Start the Server (Local Testing)
 
 ```bash
 npm run dev
@@ -89,9 +89,21 @@ If successful, you'll see:
 }
 ```
 
----
+✅ Successful Response with '200' status code on postman :
 
-### Get Leads by User
+```json
+{
+  "_id": "665f3f3f6bde91a9b82e5e99",
+  "userId": "user123",
+  "campaignName": "Product Launch",
+  "scheduledTime": "2025-06-04T19:45:00.000Z",
+  "emailList": ["example1@mail.com", "example2@mail.com"],
+  "sent": false,
+  "__v": 0
+}
+```
+
+### 📋 Get Leads by User
 
 **GET** `/api/leads/user123`  
 Returns dummy leads for the specified user ID.
@@ -110,7 +122,7 @@ Sending email to example1@mail.com from campaign: Product Launch
 
 ---
 
-## ☁️ Deployment (Optional)
+## ☁️ Deployment
 
 You can deploy this backend easily using [Railway](https://railway.app):
 
@@ -124,8 +136,18 @@ You can deploy this backend easily using [Railway](https://railway.app):
 5. Railway will build and deploy your project.
 6. Copy the generated public URL to test your APIs.
 
+### ✅ Deployed Link for Testing
+
+Use your live deployed endpoint like:
+
+**Create Campaign:**  
+`POST https://email-campaign-scheduler-production.up.railway.app/api/campaigns`
+
+**Get Leads:**  
+`GET https://email-campaign-scheduler-production.up.railway.app/api/leads/user123`
+
 ---
 
-##  Author
+## Author
 
 Made by **Harshit Kumar** — for learning and demonstration purposes.
